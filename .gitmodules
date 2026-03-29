@@ -1,0 +1,3 @@
+[submodule "hnswlib_fork"]
+	path = hnswlib_fork
+	url = git@github.com:Icemap/hnswlib.git
