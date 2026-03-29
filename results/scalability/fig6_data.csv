@@ -1,0 +1,3 @@
+dataset,size,method,build_time_sec,dist_computations,skipped_computations,classifier_overhead_sec
+sift10k,10000,Vanilla-HNSW,0.4210071563720703,2000000,,
+sift10k,10000,LearnToSkip-xgboost,308.9041922092438,19306476,9360146.0,274.140100027

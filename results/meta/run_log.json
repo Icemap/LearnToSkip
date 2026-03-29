@@ -1,0 +1,218 @@
+[
+  {
+    "experiment": "motivation",
+    "timestamp": "2026-03-29T12:50:37.558847",
+    "elapsed_seconds": 1.0773508548736572,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "classifier",
+    "timestamp": "2026-03-29T12:50:42.204797",
+    "elapsed_seconds": 4.623086929321289,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "build_speed",
+    "timestamp": "2026-03-29T13:02:50.142130",
+    "elapsed_seconds": 727.9367189407349,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "ablation",
+    "timestamp": "2026-03-29T13:29:25.083623",
+    "elapsed_seconds": 1594.9409399032593,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "threshold",
+    "timestamp": "2026-03-29T14:07:08.409874",
+    "elapsed_seconds": 2263.325676679611,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "recall",
+    "timestamp": "2026-03-29T14:19:14.241048",
+    "elapsed_seconds": 725.8302540779114,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "scalability",
+    "timestamp": "2026-03-29T14:24:26.630242",
+    "elapsed_seconds": 312.3881239891052,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "generalization",
+    "timestamp": "2026-03-29T14:29:33.052412",
+    "elapsed_seconds": 306.42122292518616,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "adaptive",
+    "timestamp": "2026-03-29T14:29:38.054743",
+    "elapsed_seconds": 5.001827955245972,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "motivation",
+    "timestamp": "2026-03-29T15:57:44.947419",
+    "elapsed_seconds": 0.949329137802124,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "classifier",
+    "timestamp": "2026-03-29T15:57:48.878194",
+    "elapsed_seconds": 3.9083099365234375,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "motivation",
+    "timestamp": "2026-03-29T16:00:04.813397",
+    "elapsed_seconds": 1.4025390148162842,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "classifier",
+    "timestamp": "2026-03-29T16:00:09.668241",
+    "elapsed_seconds": 4.835191249847412,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "motivation",
+    "timestamp": "2026-03-29T16:05:12.128215",
+    "elapsed_seconds": 1.0978960990905762,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "classifier",
+    "timestamp": "2026-03-29T16:05:16.512666",
+    "elapsed_seconds": 4.369826078414917,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "build_speed",
+    "timestamp": "2026-03-29T16:10:49.206080",
+    "elapsed_seconds": 780.3272581100464,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "build_speed",
+    "timestamp": "2026-03-29T16:14:11.108447",
+    "elapsed_seconds": 841.4393322467804,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  },
+  {
+    "experiment": "build_speed",
+    "timestamp": "2026-03-29T16:20:28.506887",
+    "elapsed_seconds": 911.9931890964508,
+    "seed": 42,
+    "datasets": [
+      "sift10k"
+    ],
+    "platform": "macOS-15.1-arm64-arm-64bit",
+    "python_version": "3.12.11",
+    "cpu": "arm"
+  }
+]

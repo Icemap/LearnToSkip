@@ -1,0 +1,2 @@
+train_dataset,test_dataset,dist_speedup,recall_at_10,vanilla_recall,recall_drop,skipped_computations,classifier_overhead_sec,distance_computations
+sift10k,sift10k,1.55306311331906,0.9300000000000002,0.9660000000000002,0.036,9363650,265.543213315,19320898
