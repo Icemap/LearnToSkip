@@ -1,0 +1,52 @@
+{
+  "vanilla": {
+    "build_time": 483.37990283966064,
+    "distance_computations": 2710625630,
+    "per_candidate_dist_ns": 178.32779912129018,
+    "recall_10_ef200": 0.99558
+  },
+  "skip_separate_0.7": {
+    "build_time": 479.74642038345337,
+    "speedup": 1.0075737562633673,
+    "skip_rate": 0.7760321310471883,
+    "distance_computations": 581507701,
+    "skipped_computations": 2014881253,
+    "per_candidate_dist_ns": 178.32779912129018,
+    "per_candidate_total_ns": 184.7744805894184,
+    "per_candidate_overhead_ns": 144.83478344517795,
+    "recall_10_ef200": 0.98493
+  },
+  "skip_colocated_0.7": {
+    "build_time": 470.66089510917664,
+    "speedup": 1.0270237189081401,
+    "skip_rate": 0.7760321310471883,
+    "distance_computations": 581507701,
+    "skipped_computations": 2014881253,
+    "per_candidate_dist_ns": 178.32779912129018,
+    "per_candidate_total_ns": 181.27518775030833,
+    "per_candidate_overhead_ns": 141.33549060606788,
+    "recall_10_ef200": 0.98493
+  },
+  "skip_colocated_0.5": {
+    "build_time": 386.06982588768005,
+    "speedup": 1.2520530495441806,
+    "skip_rate": 0.9134279985302947,
+    "distance_computations": 219625256,
+    "skipped_computations": 2317283355,
+    "per_candidate_dist_ns": 178.32779912129018,
+    "per_candidate_total_ns": 152.1812115003618,
+    "per_candidate_overhead_ns": 136.74301701274413,
+    "recall_10_ef200": 0.9282
+  },
+  "skip_colocated_0.8": {
+    "build_time": 518.1738135814667,
+    "speedup": 0.9328528192088276,
+    "skip_rate": 0.6293650369728863,
+    "distance_computations": 978508283,
+    "skipped_computations": 1661578003,
+    "per_candidate_dist_ns": 178.32779912129018,
+    "per_candidate_total_ns": 196.27154473293857,
+    "per_candidate_overhead_ns": 130.1770274989126,
+    "recall_10_ef200": 0.99157
+  }
+}

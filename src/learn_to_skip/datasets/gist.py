@@ -1,11 +1,9 @@
-"""GIST1M dataset loader."""
-import tarfile
-
+"""GIST1M dataset loader (HDF5 format from ann-benchmarks)."""
 import numpy as np
+import h5py
 import requests
 
 from learn_to_skip.datasets.base import BaseDataset, DatasetMetadata
-from learn_to_skip.datasets.sift import _read_fvecs
 
 
 class Gist1MDataset(BaseDataset):
@@ -14,25 +12,32 @@ class Gist1MDataset(BaseDataset):
         return "gist1m"
 
     def download(self) -> None:
-        url = "http://corpus-texmex.irisa.fr/gist.tar.gz"
-        tar_path = self._raw_dir / "gist.tar.gz"
-        if not tar_path.exists():
+        url = "http://ann-benchmarks.com/gist-960-euclidean.hdf5"
+        h5_path = self._raw_dir / "gist-960-euclidean.hdf5"
+        if not h5_path.exists():
             print(f"Downloading GIST1M from {url}...")
             resp = requests.get(url, stream=True)
             resp.raise_for_status()
-            with open(tar_path, "wb") as f:
+            with open(h5_path, "wb") as f:
                 for chunk in resp.iter_content(chunk_size=8192):
                     f.write(chunk)
-        with tarfile.open(tar_path, "r:gz") as tf:
-            tf.extractall(self._raw_dir)
 
     def load_train(self) -> np.ndarray:
         self.ensure_available()
-        return _read_fvecs(self._raw_dir / "gist" / "gist_base.fvecs")
+        with h5py.File(self._raw_dir / "gist-960-euclidean.hdf5", "r") as f:
+            return np.array(f["train"], dtype=np.float32)
 
     def load_query(self) -> np.ndarray:
         self.ensure_available()
-        return _read_fvecs(self._raw_dir / "gist" / "gist_query.fvecs")
+        with h5py.File(self._raw_dir / "gist-960-euclidean.hdf5", "r") as f:
+            return np.array(f["test"], dtype=np.float32)
+
+    def load_groundtruth(self, k: int = 100) -> np.ndarray:
+        """Use HDF5-bundled ground truth."""
+        self.ensure_available()
+        with h5py.File(self._raw_dir / "gist-960-euclidean.hdf5", "r") as f:
+            gt = np.array(f["neighbors"], dtype=np.int32)
+        return gt[:, :k]
 
     def metadata(self) -> DatasetMetadata:
         return DatasetMetadata(

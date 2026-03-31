@@ -1,0 +1,118 @@
+{
+  "vanilla": {
+    "build_time": 376.67218828201294,
+    "distance_computations": 2709984114,
+    "recall_10_ef200": 0.99551
+  },
+  "tree_tau0.5": {
+    "build_time": 136.12064909934998,
+    "speedup": 2.7671935946110007,
+    "skip_rate": 0.9134173889750663,
+    "recall_10_ef200": 0.92728,
+    "distance_computations": 219555509,
+    "skipped_computations": 2316236683
+  },
+  "tree_tau0.6": {
+    "build_time": 191.9600691795349,
+    "speedup": 1.9622424074546563,
+    "skip_rate": 0.776065818782188,
+    "recall_10_ef200": 0.98481,
+    "distance_computations": 581329356,
+    "skipped_computations": 2014653771
+  },
+  "tree_tau0.7": {
+    "build_time": 192.19830083847046,
+    "speedup": 1.9598101889494859,
+    "skip_rate": 0.776065818782188,
+    "recall_10_ef200": 0.98481,
+    "distance_computations": 581329356,
+    "skipped_computations": 2014653771
+  },
+  "tree_tau0.8": {
+    "build_time": 234.16873598098755,
+    "speedup": 1.6085502904734277,
+    "skip_rate": 0.629406323913044,
+    "recall_10_ef200": 0.99178,
+    "distance_computations": 978213918,
+    "skipped_computations": 1661372187
+  },
+  "alpha_2.0": {
+    "build_time": 89.76872324943542,
+    "speedup": 4.196029247685462,
+    "skip_rate": 0.9015990628040476,
+    "recall_10_ef200": 0.94094,
+    "distance_computations": 143300438,
+    "skipped_computations": 1312990956
+  },
+  "alpha_3.0": {
+    "build_time": 180.85250997543335,
+    "speedup": 2.0827589748861066,
+    "skip_rate": 0.7829663350032193,
+    "recall_10_ef200": 0.98761,
+    "distance_computations": 503000861,
+    "skipped_computations": 1814615906
+  },
+  "alpha_5.0": {
+    "build_time": 298.7385401725769,
+    "speedup": 1.260875774730689,
+    "skip_rate": 0.4621152234476616,
+    "recall_10_ef200": 0.9945,
+    "distance_computations": 1366896559,
+    "skipped_computations": 1174347623
+  },
+  "combined_a3.0_t0.7": {
+    "build_time": 137.54349422454834,
+    "speedup": 2.7385678283486974,
+    "skip_rate": 0.8955541445949977,
+    "recall_10_ef200": 0.97077,
+    "distance_computations": 218443933,
+    "skipped_computations": 1873012278,
+    "alpha_skip_count": 1627925528,
+    "tree_skip_count": 245086750,
+    "alpha_fraction": 0.8691483484231597
+  },
+  "combined_a3.0_t0.8": {
+    "build_time": 156.56549668312073,
+    "speedup": 2.405844175517005,
+    "skip_rate": 0.8676182001422242,
+    "recall_10_ef200": 0.98115,
+    "distance_computations": 293150228,
+    "skipped_computations": 1921279764,
+    "alpha_skip_count": 1730356340,
+    "tree_skip_count": 190923424,
+    "alpha_fraction": 0.900626953149963
+  },
+  "combined_a5.0_t0.7": {
+    "build_time": 187.24963307380676,
+    "speedup": 2.011604413310348,
+    "skip_rate": 0.8344357249599087,
+    "recall_10_ef200": 0.98345,
+    "distance_computations": 397759828,
+    "skipped_computations": 2004689782,
+    "alpha_skip_count": 1104504950,
+    "tree_skip_count": 900184832,
+    "alpha_fraction": 0.5509605326057376
+  },
+  "combined_a5.0_t0.8": {
+    "build_time": 215.89334678649902,
+    "speedup": 1.7447142021218056,
+    "skip_rate": 0.7536122390406893,
+    "recall_10_ef200": 0.99027,
+    "distance_computations": 606908577,
+    "skipped_computations": 1856316766,
+    "alpha_skip_count": 1133171676,
+    "tree_skip_count": 723145090,
+    "alpha_fraction": 0.6104408992877673
+  },
+  "combined_a2.0_t0.7": {
+    "build_time": 69.12579417228699,
+    "speedup": 5.449082976800336,
+    "skip_rate": 0.9129636405042589,
+    "recall_10_ef200": 0.91472,
+    "distance_computations": 95782927,
+    "skipped_computations": 1004710333,
+    "alpha_skip_count": 977527120,
+    "tree_skip_count": 27183213,
+    "alpha_fraction": 0.9729442286924305
+  }
+}

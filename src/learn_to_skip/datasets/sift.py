@@ -4,6 +4,7 @@ import tarfile
 from pathlib import Path
 
 import numpy as np
+import h5py
 import requests
 
 from learn_to_skip.datasets.base import BaseDataset, DatasetMetadata
@@ -42,35 +43,39 @@ def _read_ivecs(path: Path) -> np.ndarray:
 
 
 class Sift1MDataset(BaseDataset):
-    """ANN-benchmarks SIFT1M dataset."""
+    """ANN-benchmarks SIFT1M dataset (HDF5 format)."""
 
     @property
     def name(self) -> str:
         return "sift1m"
 
     def download(self) -> None:
-        url = "ftp://ftp.irisa.fr/local/texmex/corpus/sift.tar.gz"
-        tar_path = self._raw_dir / "sift.tar.gz"
-        if not tar_path.exists():
+        url = "http://ann-benchmarks.com/sift-128-euclidean.hdf5"
+        h5_path = self._raw_dir / "sift-128-euclidean.hdf5"
+        if not h5_path.exists():
             print(f"Downloading SIFT1M from {url}...")
-            # Use requests via http mirror
-            http_url = "http://corpus-texmex.irisa.fr/sift.tar.gz"
-            resp = requests.get(http_url, stream=True)
+            resp = requests.get(url, stream=True)
             resp.raise_for_status()
-            with open(tar_path, "wb") as f:
+            with open(h5_path, "wb") as f:
                 for chunk in resp.iter_content(chunk_size=8192):
                     f.write(chunk)
-        # Extract
-        with tarfile.open(tar_path, "r:gz") as tf:
-            tf.extractall(self._raw_dir)
 
     def load_train(self) -> np.ndarray:
         self.ensure_available()
-        return _read_fvecs(self._raw_dir / "sift" / "sift_base.fvecs")
+        with h5py.File(self._raw_dir / "sift-128-euclidean.hdf5", "r") as f:
+            return np.array(f["train"], dtype=np.float32)
 
     def load_query(self) -> np.ndarray:
         self.ensure_available()
-        return _read_fvecs(self._raw_dir / "sift" / "sift_query.fvecs")
+        with h5py.File(self._raw_dir / "sift-128-euclidean.hdf5", "r") as f:
+            return np.array(f["test"], dtype=np.float32)
+
+    def load_groundtruth(self, k: int = 100) -> np.ndarray:
+        """Use HDF5-bundled ground truth."""
+        self.ensure_available()
+        with h5py.File(self._raw_dir / "sift-128-euclidean.hdf5", "r") as f:
+            gt = np.array(f["neighbors"], dtype=np.int32)
+        return gt[:, :k]
 
     def metadata(self) -> DatasetMetadata:
         return DatasetMetadata(

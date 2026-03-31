@@ -33,6 +33,7 @@ class CppLearnedSkipBuilder(BaseBuilder):
         mode: str = "universal",
         train_fraction: float = 0.3,
         tree_params: dict | None = None,
+        colocated: bool = True,
         seed: int = SEED,
     ) -> None:
         self.threshold = threshold
@@ -40,6 +41,7 @@ class CppLearnedSkipBuilder(BaseBuilder):
         self.mode = mode
         self.train_fraction = train_fraction
         self.tree_params = tree_params or DEFAULT_TREE_PARAMS
+        self.colocated = colocated
         self.seed = seed
 
     @property
@@ -61,6 +63,9 @@ class CppLearnedSkipBuilder(BaseBuilder):
         index = hnswlib.Index(space=metric, dim=dim)
         index.init_index(max_elements=n, M=M, ef_construction=ef_construction,
                          random_seed=self.seed)
+
+        if self.colocated:
+            index.enable_projection_storage(self.proj_dim)
 
         t0 = time.time()
 

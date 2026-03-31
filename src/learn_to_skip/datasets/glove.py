@@ -33,6 +33,13 @@ class GloVe200Dataset(BaseDataset):
         with h5py.File(self._raw_dir / "glove-200-angular.hdf5", "r") as f:
             return np.array(f["test"], dtype=np.float32)
 
+    def load_groundtruth(self, k: int = 100) -> np.ndarray:
+        """Use HDF5-bundled ground truth."""
+        self.ensure_available()
+        with h5py.File(self._raw_dir / "glove-200-angular.hdf5", "r") as f:
+            gt = np.array(f["neighbors"], dtype=np.int32)
+        return gt[:, :k]
+
     def metadata(self) -> DatasetMetadata:
         return DatasetMetadata(
             name="glove200", dim=200, metric="cosine", n_train=1_183_514, n_query=10_000

@@ -1,0 +1,47 @@
+{
+  "vanilla": {
+    "build_time": 2870.3,
+    "recall_10_ef200": 0.9073,
+    "speedup": 1.0
+  },
+  "skip_tau0.5": {
+    "build_time": 990.7,
+    "skip_rate": 0.8066,
+    "recall_10_ef200": 0.803,
+    "speedup": 2.8972443726657917
+  },
+  "skip_tau0.6": {
+    "build_time": 1343.3,
+    "skip_rate": 0.6855,
+    "recall_10_ef200": 0.8477,
+    "speedup": 2.136752773021663
+  },
+  "skip_tau0.7": {
+    "build_time": 1318.8,
+    "skip_rate": 0.6855,
+    "recall_10_ef200": 0.8477,
+    "speedup": 2.176448286320898
+  },
+  "skip_tau0.8": {
+    "build_time": 3000.5,
+    "skip_rate": 0.0,
+    "recall_10_ef200": 0.9073,
+    "speedup": 0.9566072321279787
+  },
+  "combined_a3_t0.8": {
+    "build_time": 1376.7,
+    "skip_rate": 0.6771,
+    "recall_10_ef200": 0.849,
+    "speedup": 2.084913198227646
+  },
+  "reduced_efc100": {
+    "build_time": 1565.3390300273895,
+    "recall_10_ef200": 0.8759,
+    "speedup": 1.8336602773839845
+  },
+  "reduced_efc50": {
+    "build_time": 804.7561700344086,
+    "recall_10_ef200": 0.8084,
+    "speedup": 3.5666703864815057
+  }
+}

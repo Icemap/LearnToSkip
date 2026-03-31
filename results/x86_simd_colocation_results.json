@@ -1,0 +1,52 @@
+{
+  "vanilla": {
+    "build_time": 483.0158407688141,
+    "distance_computations": 2710625630,
+    "per_candidate_dist_ns": 178.19348988034696,
+    "recall_10_ef200": 0.99558
+  },
+  "skip_separate_0.7": {
+    "build_time": 427.4024839401245,
+    "speedup": 1.1301194048195577,
+    "skip_rate": 0.7760321310471883,
+    "distance_computations": 581507701,
+    "skipped_computations": 2014881253,
+    "per_candidate_dist_ns": 178.19348988034696,
+    "per_candidate_total_ns": 164.61419745360868,
+    "per_candidate_overhead_ns": 124.70458126384295,
+    "recall_10_ef200": 0.98493
+  },
+  "skip_colocated_0.7": {
+    "build_time": 415.66401839256287,
+    "speedup": 1.1620342858559447,
+    "skip_rate": 0.7760321310471883,
+    "distance_computations": 581507701,
+    "skipped_computations": 2014881253,
+    "per_candidate_dist_ns": 178.19348988034696,
+    "per_candidate_total_ns": 160.0931238565741,
+    "per_candidate_overhead_ns": 120.18350766680837,
+    "recall_10_ef200": 0.98493
+  },
+  "skip_colocated_0.5": {
+    "build_time": 336.6965570449829,
+    "speedup": 1.4345731509938868,
+    "skip_rate": 0.9134279985302947,
+    "distance_computations": 219625256,
+    "skipped_computations": 2317283355,
+    "per_candidate_dist_ns": 178.19348988034696,
+    "per_candidate_total_ns": 132.71922984733126,
+    "per_candidate_overhead_ns": 117.29266277951794,
+    "recall_10_ef200": 0.9282
+  },
+  "skip_colocated_0.8": {
+    "build_time": 465.1955347061157,
+    "speedup": 1.0383071305143894,
+    "skip_rate": 0.6293650369728863,
+    "distance_computations": 978508283,
+    "skipped_computations": 1661578003,
+    "per_candidate_dist_ns": 178.19348988034696,
+    "per_candidate_total_ns": 176.20467072344607,
+    "per_candidate_overhead_ns": 110.15993318997131,
+    "recall_10_ef200": 0.99157
+  }
+}

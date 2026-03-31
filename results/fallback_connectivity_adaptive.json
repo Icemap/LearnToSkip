@@ -1,0 +1,92 @@
+{
+  "connectivity": {
+    "vanilla": {
+      "num_components": 1,
+      "largest_component_pct": 100.0,
+      "avg_path_length": 2.96,
+      "max_path_length": 8
+    },
+    "tau_0.5": {
+      "num_components": 35,
+      "largest_component_pct": 100.0,
+      "avg_path_length": 2.51,
+      "max_path_length": 9
+    },
+    "tau_0.7": {
+      "num_components": 9,
+      "largest_component_pct": 100.0,
+      "avg_path_length": 2.82,
+      "max_path_length": 9
+    },
+    "tau_0.8": {
+      "num_components": 4,
+      "largest_component_pct": 100.0,
+      "avg_path_length": 2.9,
+      "max_path_length": 8
+    }
+  },
+  "fallback_validation": {
+    "vanilla_time": 379.0,
+    "vanilla_r10": 0.9955,
+    "build_time": 259.0,
+    "monitor_time_ms": 2.15,
+    "retrain_time": 0.0,
+    "num_retrains": 0,
+    "total_wall_clock": 259.0,
+    "speedup": 1.46,
+    "recall_10": 0.9918,
+    "tau": 0.8,
+    "batch_size": 50000
+  },
+  "adaptive_threshold": {
+    "vanilla_time": 390.7212378978729,
+    "vanilla_r10": 0.99551,
+    "adaptive_balanced": {
+      "target_skip_rate": 0.6,
+      "calibrated_tau": 0.7375,
+      "calibration_steps": 12,
+      "calibration_time": 73.07783007621765,
+      "build_time": 196.74890398979187,
+      "speedup": 1.9858877481632382,
+      "skip_rate": 0.776065818782188,
+      "recall_10": 0.98481,
+      "total_time_with_calibration": 269.8267340660095,
+      "speedup_with_calibration": 1.4480449435462097
+    },
+    "adaptive_aggressive": {
+      "target_skip_rate": 0.8,
+      "calibrated_tau": 0.525,
+      "calibration_steps": 12,
+      "calibration_time": 61.81690287590027,
+      "build_time": 146.33772802352905,
+      "speedup": 2.6699966110930085,
+      "skip_rate": 0.9134173889750663,
+      "recall_10": 0.92728,
+      "total_time_with_calibration": 208.15463089942932,
+      "speedup_with_calibration": 1.8770720411531527
+    },
+    "fixed_tau_0.8": {
+      "tau": 0.8,
+      "build_time": 300.7436580657959,
+      "speedup": 1.2991836317040208,
+      "skip_rate": 0.629406323913044,
+      "recall_10": 0.99178
+    },
+    "deep1m_fixed_0.8": {
+      "build_time": 320.7511591911316,
+      "speedup": 0.8555364150747877,
+      "skip_rate": 0.0,
+      "recall_10": 0.99172,
+      "vanilla_time": 274.41429686546326,
+      "vanilla_r10": 0.99172
+    },
+    "deep1m_adaptive": {
+      "calibrated_tau": 0.525,
+      "calibration_time": 71.51417183876038,
+      "build_time": 178.2906529903412,
+      "speedup": 1.539140119029849,
+      "skip_rate": 0.7691157506014134,
+      "recall_10": 0.97907
+    }
+  }
+}
